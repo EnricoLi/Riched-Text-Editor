@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>785</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyQt Text Editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>C:/Users/Enrico Lima/Documents/Icons/icons8-e-learning-96.png</normalon>
+   </iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTextEdit" name="textEdit"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="separator"/>
+    <addaction name="actionPrint"/>
+    <addaction name="actionPrint_Preview"/>
+    <addaction name="actionExport_PDF"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionPaste"/>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <widget class="QMenu" name="menuFormat">
+    <property name="title">
+     <string>Format</string>
+    </property>
+    <addaction name="actionFont"/>
+    <addaction name="actionColor"/>
+   </widget>
+   <widget class="QMenu" name="menuStyle">
+    <property name="title">
+     <string>Style</string>
+    </property>
+    <addaction name="actionBold"/>
+    <addaction name="actionItalic"/>
+    <addaction name="actionUnderline"/>
+    <addaction name="separator"/>
+    <addaction name="actionLeft"/>
+    <addaction name="actionCenter"/>
+    <addaction name="actionRight"/>
+    <addaction name="actionJustify"/>
+   </widget>
+   <widget class="QMenu" name="menuText_Hightlighter">
+    <property name="title">
+     <string>Text Highlighter</string>
+    </property>
+    <addaction name="actionText_Highlight"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionAbout_Qt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuFormat"/>
+   <addaction name="menuStyle"/>
+   <addaction name="menuText_Hightlighter"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
+   <addaction name="actionPrint"/>
+   <addaction name="actionPrint_Preview"/>
+   <addaction name="actionExport_PDF"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionFont"/>
+   <addaction name="actionColor"/>
+   <addaction name="separator"/>
+   <addaction name="actionBold"/>
+   <addaction name="actionItalic"/>
+   <addaction name="actionUnderline"/>
+   <addaction name="separator"/>
+   <addaction name="actionLeft"/>
+   <addaction name="actionCenter"/>
+   <addaction name="actionRight"/>
+   <addaction name="actionJustify"/>
+  </widget>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/icons8-file-32.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/save_as.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/print.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionPrint_Preview">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/print_preview.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Print Preview</string>
+   </property>
+  </action>
+  <action name="actionExport_PDF">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/export_pdf.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Export PDF</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/exit.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/copy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/cut.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/paste.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/undo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/redo.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionFont">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/font.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Font</string>
+   </property>
+  </action>
+  <action name="actionColor">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/color.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="actionBold">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/bold.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Bold</string>
+   </property>
+  </action>
+  <action name="actionItalic">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/icons8-italic-64.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Italic</string>
+   </property>
+  </action>
+  <action name="actionUnderline">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/underline.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Underline</string>
+   </property>
+  </action>
+  <action name="actionLeft">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/align-left.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionCenter">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/align-center.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Center</string>
+   </property>
+  </action>
+  <action name="actionRight">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/align-right.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionJustify">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/align-justify.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Justify</string>
+   </property>
+  </action>
+  <action name="actionTime">
+   <property name="text">
+    <string>Time</string>
+   </property>
+  </action>
+  <action name="actionDate">
+   <property name="text">
+    <string>Date</string>
+   </property>
+  </action>
+  <action name="actionText_Highlight">
+   <property name="icon">
+    <iconset>
+     <normalon>C:/Users/Enrico Lima/Documents/Icons/icons8-marker-pen-64.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Text Highlight</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionAbout_Qt">
+   <property name="text">
+    <string>About Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="C:/Users/Enrico Lima/Documents/icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
